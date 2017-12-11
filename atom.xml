@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>天青丶@blog</title>
   
-  
+  <subtitle>蹉跎错，消磨过，最是光阴化浮沫</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tianqingdian.github.io/"/>
@@ -10,7 +10,7 @@
   <id>https://tianqingdian.github.io/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>天青丶</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://tianqingdian.github.io/undefined/year/12/08/hello-world/"/>
-    <id>https://tianqingdian.github.io/undefined/year/12/08/hello-world/</id>
+    <link href="https://tianqingdian.github.io//blogs/year/12/08/hello-world/"/>
+    <id>https://tianqingdian.github.io//blogs/year/12/08/hello-world/</id>
     <published>2017-12-08T06:20:16.588Z</published>
     <updated>2017-12-08T06:20:16.588Z</updated>
     
