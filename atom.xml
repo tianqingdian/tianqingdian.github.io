@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tianqingdian.github.io/"/>
-  <updated>2017-12-11T08:23:57.977Z</updated>
+  <updated>2017-12-12T07:03:20.170Z</updated>
   <id>https://tianqingdian.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>获取option的自定义属性的值</title>
+    <link href="https://tianqingdian.github.io//blogs/year/12/12/%E8%8E%B7%E5%8F%96option%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7%E7%9A%84%E5%80%BC/"/>
+    <id>https://tianqingdian.github.io//blogs/year/12/12/获取option的自定义属性的值/</id>
+    <published>2017-12-12T06:46:49.000Z</published>
+    <updated>2017-12-12T07:03:20.170Z</updated>
+    
+    <content type="html"><![CDATA[<p>###html部分:<br><a id="more"></a><br>    <select name="zdyqz" class="zdyqz" id="zdyqz"><br>         <c:foreach items="${userList }" var="user" varstatus="vs"><br>             <option value="${user.userId }" parentcode="${user.code }">${user.userName }</option><br>         </c:foreach><br>    </select></p><p>###js部分:<br>     document.getElementById(‘zdyqz’).onchange=function (){<br>        var code= $(this).find(“option:selected”).attr(“parentcode”);<br>        alert(code);<br>        };</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;###html部分:&lt;br&gt;
+    
+    </summary>
+    
+      <category term="HTML" scheme="https://tianqingdian.github.io/categories/HTML/"/>
+    
+    
+      <category term="自定义" scheme="https://tianqingdian.github.io/tags/%E8%87%AA%E5%AE%9A%E4%B9%89/"/>
+    
+      <category term="属性" scheme="https://tianqingdian.github.io/tags/%E5%B1%9E%E6%80%A7/"/>
+    
+      <category term="取值" scheme="https://tianqingdian.github.io/tags/%E5%8F%96%E5%80%BC/"/>
+    
+  </entry>
   
   <entry>
     <title>git命令</title>
