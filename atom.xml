@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tianqingdian.github.io/"/>
-  <updated>2017-12-12T07:05:47.288Z</updated>
+  <updated>2017-12-12T07:13:32.856Z</updated>
   <id>https://tianqingdian.github.io/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="https://tianqingdian.github.io//blogs/year/12/12/%E8%8E%B7%E5%8F%96option%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7%E7%9A%84%E5%80%BC/"/>
     <id>https://tianqingdian.github.io//blogs/year/12/12/获取option的自定义属性的值/</id>
     <published>2017-12-12T06:46:49.000Z</published>
-    <updated>2017-12-12T07:05:47.288Z</updated>
+    <updated>2017-12-12T07:13:32.856Z</updated>
     
-    <content type="html"><![CDATA[<p>###html部分:<br>    <select name="zdyqz" class="zdyqz" id="zdyqz"><br>         <c:foreach items="${userList }" var="user" varstatus="vs"><br>             <option value="${user.userId }" parentcode="${user.code }">${user.userName }</option><br>         </c:foreach><br>    </select><br><a id="more"></a></p><p>###js部分:<br>     document.getElementById(‘zdyqz’).onchange=function (){<br>        var code= $(this).find(“option:selected”).attr(“parentcode”);<br>        alert(code);<br>        };</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="html部分"><a href="#html部分" class="headerlink" title="html部分:"></a>html部分:</h3><a id="more"></a><pre><code>&lt;select name=&quot;zdyqz&quot; class=&quot;zdyqz&quot; id =&quot;zdyqz&quot;&gt;     &lt;c:forEach items=&quot;${userList }&quot; var=&quot;user&quot; varStatus=&quot;vs&quot;&gt;         &lt;option value=&quot;${user.userId }&quot; parentcode=&quot;${user.code }&quot;&gt;${user.userName }&lt;/option&gt;      &lt;/c:forEach&gt;&lt;/select&gt;</code></pre><h3 id="js部分"><a href="#js部分" class="headerlink" title="js部分:"></a>js部分:</h3><pre><code>document.getElementById(&apos;zdyqz&apos;).onchange=function (){    var code= $(this).find(&quot;option:selected&quot;).attr(&quot;parentcode&quot;);    alert(code);};</code></pre>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;###html部分:&lt;br&gt;    &lt;select name=&quot;zdyqz&quot; class=&quot;zdyqz&quot; id=&quot;zdyqz&quot;&gt;&lt;br&gt;         &lt;c:foreach items=&quot;${userList }&quot; var=&quot;user&quot; varstatus=&quot;vs&quot;&gt;&lt;br&gt;             &lt;option value=&quot;${user.userId }&quot; parentcode=&quot;${user.code }&quot;&gt;${user.userName }&lt;/option&gt;&lt;br&gt;         &lt;/c:foreach&gt;&lt;br&gt;    &lt;/select&gt;&lt;br&gt;
+      &lt;h3 id=&quot;html部分&quot;&gt;&lt;a href=&quot;#html部分&quot; class=&quot;headerlink&quot; title=&quot;html部分:&quot;&gt;&lt;/a&gt;html部分:&lt;/h3&gt;
     
     </summary>
     

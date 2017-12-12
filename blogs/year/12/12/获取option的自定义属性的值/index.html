@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="###html部分:                          ${user.userName }">
+<meta name="description" content="html部分:">
 <meta name="keywords" content="自定义,属性,取值">
 <meta property="og:type" content="article">
 <meta property="og:title" content="获取option的自定义属性的值">
 <meta property="og:url" content="https://tianqingdian.github.io/blogs/year/12/12/获取option的自定义属性的值/index.html">
 <meta property="og:site_name" content="天青丶">
-<meta property="og:description" content="###html部分:                          ${user.userName }">
+<meta property="og:description" content="html部分:">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-12T07:05:47.288Z">
+<meta property="og:updated_time" content="2017-12-12T07:13:32.856Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="获取option的自定义属性的值">
-<meta name="twitter:description" content="###html部分:                          ${user.userName }">
+<meta name="twitter:description" content="html部分:">
 
 
 
@@ -398,9 +398,17 @@
       
 
       
-        <p>###html部分:<br>    <select name="zdyqz" class="zdyqz" id="zdyqz"><br>         <c:foreach items="${userList }" var="user" varstatus="vs"><br>             <option value="${user.userId }" parentcode="${user.code }">${user.userName }</option><br>         </c:foreach><br>    </select><br><a id="more"></a></p>
-<p>###js部分:<br>     document.getElementById(‘zdyqz’).onchange=function (){<br>        var code= $(this).find(“option:selected”).attr(“parentcode”);<br>        alert(code);<br>        };</p>
-
+        <h3 id="html部分"><a href="#html部分" class="headerlink" title="html部分:"></a>html部分:</h3><a id="more"></a>
+<pre><code>&lt;select name=&quot;zdyqz&quot; class=&quot;zdyqz&quot; id =&quot;zdyqz&quot;&gt;
+     &lt;c:forEach items=&quot;${userList }&quot; var=&quot;user&quot; varStatus=&quot;vs&quot;&gt;
+         &lt;option value=&quot;${user.userId }&quot; parentcode=&quot;${user.code }&quot;&gt;${user.userName }&lt;/option&gt; 
+     &lt;/c:forEach&gt;
+&lt;/select&gt;
+</code></pre><h3 id="js部分"><a href="#js部分" class="headerlink" title="js部分:"></a>js部分:</h3><pre><code>document.getElementById(&apos;zdyqz&apos;).onchange=function (){
+    var code= $(this).find(&quot;option:selected&quot;).attr(&quot;parentcode&quot;);
+    alert(code);
+};
+</code></pre>
       
     </div>
     
@@ -494,8 +502,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -576,6 +593,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#html部分"><span class="nav-number">1.</span> <span class="nav-text"><a href="#html&#x90E8;&#x5206;" class="headerlink" title="html&#x90E8;&#x5206;:"></a>html&#x90E8;&#x5206;:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#js部分"><span class="nav-number">2.</span> <span class="nav-text"><a href="#js&#x90E8;&#x5206;" class="headerlink" title="js&#x90E8;&#x5206;:"></a>js&#x90E8;&#x5206;:</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
