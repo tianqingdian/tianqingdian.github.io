@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="###html部分:">
+<meta name="description" content="###html部分:                          ${user.userName }">
 <meta name="keywords" content="自定义,属性,取值">
 <meta property="og:type" content="article">
 <meta property="og:title" content="获取option的自定义属性的值">
 <meta property="og:url" content="https://tianqingdian.github.io/blogs/year/12/12/获取option的自定义属性的值/index.html">
 <meta property="og:site_name" content="天青丶">
-<meta property="og:description" content="###html部分:">
+<meta property="og:description" content="###html部分:                          ${user.userName }">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-12T07:03:20.170Z">
+<meta property="og:updated_time" content="2017-12-12T07:05:47.288Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="获取option的自定义属性的值">
-<meta name="twitter:description" content="###html部分:">
+<meta name="twitter:description" content="###html部分:                          ${user.userName }">
 
 
 
@@ -398,7 +398,7 @@
       
 
       
-        <p>###html部分:<br><a id="more"></a><br>    <select name="zdyqz" class="zdyqz" id="zdyqz"><br>         <c:foreach items="${userList }" var="user" varstatus="vs"><br>             <option value="${user.userId }" parentcode="${user.code }">${user.userName }</option><br>         </c:foreach><br>    </select></p>
+        <p>###html部分:<br>    <select name="zdyqz" class="zdyqz" id="zdyqz"><br>         <c:foreach items="${userList }" var="user" varstatus="vs"><br>             <option value="${user.userId }" parentcode="${user.code }">${user.userName }</option><br>         </c:foreach><br>    </select><br><a id="more"></a></p>
 <p>###js部分:<br>     document.getElementById(‘zdyqz’).onchange=function (){<br>        var code= $(this).find(“option:selected”).attr(“parentcode”);<br>        alert(code);<br>        };</p>
 
       
