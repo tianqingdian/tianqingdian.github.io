@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[标签事件自动提交表单]]></title>
+    <url>%2F%2Fblogs%2Fyear%2F12%2F13%2Finput-type-image-%E6%A0%87%E7%AD%BE%E4%BA%8B%E4%BB%B6%E8%87%AA%E5%8A%A8%E6%8F%90%E4%BA%A4%E8%A1%A8%E5%8D%95%2F</url>
+    <content type="text"><![CDATA[情景在下面的情况下点击&lt;input type=image&gt;来更换验证码会直接提交表单 &lt;form class=&quot;form-login&quot; action=&quot;login.html&quot; method=&quot;get&quot;&gt; &lt;div class=&quot;login-wrap&quot;&gt; &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;请输入用户名&quot; autofocus name=&quot;name&quot; id=&quot;count&quot;&gt; &lt;br&gt; &lt;input type=&quot;password&quot;class=&quot;form-control&quot; placeholder=&quot;请输入密码&quot; name=&quot;password&quot;id=&quot;password&quot;&gt; 验证码:&lt;input type=&quot;text&quot; name=&quot;pcode&quot; class=&quot;form-control&quot; size=&quot;5&quot;&gt; &lt;!-- 单击图片都可以换下一张 --&gt; &lt;input id=&quot;pcode&quot; type=&quot;image&quot; src=&quot;pcode.html&quot; onclick=&quot;code();&quot;&gt;&lt;br&gt; &lt;button class=&quot;btn btn-theme btn-block&quot; type=&quot;button&quot; id=&quot;login&quot;&gt;&lt;i class=&quot;fa fa-lock&quot;&gt;&lt;/i&gt; 登陆&lt;/button&gt; &lt;/div&gt; &lt;/form&gt; 解决可以在&lt;input type=image&gt;标签中添加onclick在事件结束后添加return false；语句如下:&lt;input id=&quot;pcode&quot; type=&quot;image&quot; src=&quot;pcode.html&quot; onclick=&quot;code();return false；&quot;&gt;]]></content>
+      <categories>
+        <category>HTML</category>
+      </categories>
+      <tags>
+        <tag>input</tag>
+        <tag>image</tag>
+        <tag>表单</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[获取option的自定义属性的值]]></title>
     <url>%2F%2Fblogs%2Fyear%2F12%2F12%2F%E8%8E%B7%E5%8F%96option%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7%E7%9A%84%E5%80%BC%2F</url>
     <content type="text"><![CDATA[html部分: &lt;select name=&quot;zdyqz&quot; class=&quot;zdyqz&quot; id =&quot;zdyqz&quot;&gt; &lt;c:forEach items=&quot;${userList }&quot; var=&quot;user&quot; varStatus=&quot;vs&quot;&gt; &lt;option value=&quot;${user.userId }&quot; parentcode=&quot;${user.code }&quot;&gt;${user.userName }&lt;/option&gt; &lt;/c:forEach&gt; &lt;/select&gt; js部分:document.getElementById(&apos;zdyqz&apos;).onchange=function (){ var code= $(this).find(&quot;option:selected&quot;).attr(&quot;parentcode&quot;); alert(code); };]]></content>

@@ -308,6 +308,159 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tianqingdian.github.io/blogs/year/12/13/input-type-image-标签事件自动提交表单/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="天青丶">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/34325819?s=460&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="天青丶">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blogs/year/12/13/input-type-image-标签事件自动提交表单/" itemprop="url"><input type=image>标签事件自动提交表单</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-13T15:27:43+08:00">
+                2017-12-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/HTML/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="情景"><a href="#情景" class="headerlink" title="情景"></a>情景</h2><p>在下面的情况下点击<code>&lt;input type=image&gt;</code>来更换验证码会直接提交表单</p>
+<pre><code>&lt;form class=&quot;form-login&quot; action=&quot;login.html&quot; method=&quot;get&quot;&gt;
+    &lt;div class=&quot;login-wrap&quot;&gt;
+        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;请输入用户名&quot; autofocus name=&quot;name&quot; id=&quot;count&quot;&gt; &lt;br&gt; 
+        &lt;input type=&quot;password&quot;class=&quot;form-control&quot; placeholder=&quot;请输入密码&quot; name=&quot;password&quot;id=&quot;password&quot;&gt; 
+        验证码:&lt;input type=&quot;text&quot; name=&quot;pcode&quot; class=&quot;form-control&quot; size=&quot;5&quot;&gt;  
+        &lt;!-- 单击图片都可以换下一张 --&gt;  
+        &lt;input id=&quot;pcode&quot; type=&quot;image&quot; src=&quot;pcode.html&quot; onclick=&quot;code();&quot;&gt;&lt;br&gt;
+        &lt;button class=&quot;btn btn-theme btn-block&quot; type=&quot;button&quot; id=&quot;login&quot;&gt;&lt;i class=&quot;fa fa-lock&quot;&gt;&lt;/i&gt; 登陆&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code></pre><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>可以在<code>&lt;input type=image&gt;</code>标签中添加onclick在事件结束后添加return false；语句如下:<br><code>&lt;input id=&quot;pcode&quot; type=&quot;image&quot; src=&quot;pcode.html&quot; onclick=&quot;code();return false；&quot;&gt;</code></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://tianqingdian.github.io/blogs/year/12/12/获取option的自定义属性的值/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -783,7 +936,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -805,7 +958,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

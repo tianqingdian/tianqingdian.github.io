@@ -7,13 +7,6 @@
     </url>
 
     <url>
-        <loc>https://tianqingdian.github.io/categories/HTML/</loc>
-        <lastmod>2017-12-12T07:13:32.856Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://tianqingdian.github.io/categories/Hexo/</loc>
         <lastmod>2017-12-13T03:29:18.800Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -23,6 +16,13 @@
     <url>
         <loc>https://tianqingdian.github.io/categories/Git/</loc>
         <lastmod>2017-12-13T03:29:32.691Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://tianqingdian.github.io/categories/HTML/</loc>
+        <lastmod>2017-12-13T07:47:53.754Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

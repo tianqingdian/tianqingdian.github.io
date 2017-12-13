@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tianqingdian.github.io/"/>
-  <updated>2017-12-12T07:13:32.856Z</updated>
+  <updated>2017-12-13T07:47:53.754Z</updated>
   <id>https://tianqingdian.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>&lt;input type=image&gt;标签事件自动提交表单</title>
+    <link href="https://tianqingdian.github.io//blogs/year/12/13/input-type-image-%E6%A0%87%E7%AD%BE%E4%BA%8B%E4%BB%B6%E8%87%AA%E5%8A%A8%E6%8F%90%E4%BA%A4%E8%A1%A8%E5%8D%95/"/>
+    <id>https://tianqingdian.github.io//blogs/year/12/13/input-type-image-标签事件自动提交表单/</id>
+    <published>2017-12-13T07:27:43.000Z</published>
+    <updated>2017-12-13T07:47:53.754Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="情景"><a href="#情景" class="headerlink" title="情景"></a>情景</h2><p>在下面的情况下点击<code>&lt;input type=image&gt;</code>来更换验证码会直接提交表单</p><pre><code>&lt;form class=&quot;form-login&quot; action=&quot;login.html&quot; method=&quot;get&quot;&gt;    &lt;div class=&quot;login-wrap&quot;&gt;        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;请输入用户名&quot; autofocus name=&quot;name&quot; id=&quot;count&quot;&gt; &lt;br&gt;         &lt;input type=&quot;password&quot;class=&quot;form-control&quot; placeholder=&quot;请输入密码&quot; name=&quot;password&quot;id=&quot;password&quot;&gt;         验证码:&lt;input type=&quot;text&quot; name=&quot;pcode&quot; class=&quot;form-control&quot; size=&quot;5&quot;&gt;          &lt;!-- 单击图片都可以换下一张 --&gt;          &lt;input id=&quot;pcode&quot; type=&quot;image&quot; src=&quot;pcode.html&quot; onclick=&quot;code();&quot;&gt;&lt;br&gt;        &lt;button class=&quot;btn btn-theme btn-block&quot; type=&quot;button&quot; id=&quot;login&quot;&gt;&lt;i class=&quot;fa fa-lock&quot;&gt;&lt;/i&gt; 登陆&lt;/button&gt;    &lt;/div&gt;&lt;/form&gt;</code></pre><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>可以在<code>&lt;input type=image&gt;</code>标签中添加onclick在事件结束后添加return false；语句如下:<br><code>&lt;input id=&quot;pcode&quot; type=&quot;image&quot; src=&quot;pcode.html&quot; onclick=&quot;code();return false；&quot;&gt;</code></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;情景&quot;&gt;&lt;a href=&quot;#情景&quot; class=&quot;headerlink&quot; title=&quot;情景&quot;&gt;&lt;/a&gt;情景&lt;/h2&gt;&lt;p&gt;在下面的情况下点击&lt;code&gt;&amp;lt;input type=image&amp;gt;&lt;/code&gt;来更换验证码会直接提交表单&lt;/p&gt;
+&lt;pre&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="HTML" scheme="https://tianqingdian.github.io/categories/HTML/"/>
+    
+    
+      <category term="input" scheme="https://tianqingdian.github.io/tags/input/"/>
+    
+      <category term="image" scheme="https://tianqingdian.github.io/tags/image/"/>
+    
+      <category term="表单" scheme="https://tianqingdian.github.io/tags/%E8%A1%A8%E5%8D%95/"/>
+    
+  </entry>
   
   <entry>
     <title>获取option的自定义属性的值</title>
