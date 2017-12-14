@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tianqingdian.github.io/"/>
-  <updated>2017-12-13T07:47:53.754Z</updated>
+  <updated>2017-12-14T07:15:29.028Z</updated>
   <id>https://tianqingdian.github.io/</id>
   
   <author>
@@ -17,21 +17,42 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>浏览器后退刷新页面</title>
+    <link href="https://tianqingdian.github.io//blogs/year/12/14/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%90%8E%E9%80%80%E5%88%B7%E6%96%B0%E9%A1%B5%E9%9D%A2/"/>
+    <id>https://tianqingdian.github.io//blogs/year/12/14/浏览器后退刷新页面/</id>
+    <published>2017-12-14T06:35:28.000Z</published>
+    <updated>2017-12-14T07:15:29.028Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>这篇文章介绍了几种浏览器后退按钮强制刷新页面的方法,需要的朋友可以参考下<br><a id="more"></a></p><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一:"></a>方法一:</h3><p>1、 在页面中增加隐藏域 <code>&lt;input type=&quot;hidden&quot; id=&quot;refreshed&quot; value=&quot;no&quot;&gt;</code><br>2、 通过js设置和获取隐藏域值来自动刷新页面</p></blockquote><pre><code>onload=function(){      var e=document.getElementById(&quot;refreshed&quot;);      if(e.value==&quot;no&quot;)e.value=&quot;yes&quot;;      else{e.value=&quot;no&quot;;location.reload();}      }</code></pre><h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二:"></a>方法二:</h3><p>不使用隐藏域的js写法：</p><pre><code>if(window.name != &quot;bencalie&quot;){    location.reload();    window.name = &quot;bencalie&quot;;    }else{    window.name = &quot;&quot;;}</code></pre><h3 id="方法三"><a href="#方法三" class="headerlink" title="方法三:"></a>方法三:</h3><p>禁止HTML头部缓存：</p><pre><code>&lt;meta http-equiv=&quot;Pragma&quot; content=&quot;no-cache&quot;&gt;&lt;meta http-equiv=&quot;Cache-Control&quot; content=&quot;no-cache&quot;&gt;&lt;meta http-equiv=&quot;Expires&quot; content=&quot;0&quot;&gt;</code></pre><h3 id="方法四"><a href="#方法四" class="headerlink" title="方法四:"></a>方法四:</h3><p>jsp设置回退页的头部缓存：</p><pre><code>&lt;%      response.setHeader(&quot;Cache-Control&quot;,&quot;no-store&quot;);      response.setDateHeader(&quot;Expires&quot;, 0);      response.setHeader(&quot;Pragma&quot;,&quot;no-cache&quot;);   %&gt;  </code></pre><h3 id="方法五"><a href="#方法五" class="headerlink" title="方法五:"></a>方法五:</h3><p>服务器设置头部缓存：</p><pre><code>response.setHeader( &quot;Pragma&quot;, &quot;no-cache&quot; );//不允许浏览器端或缓存服务器缓存当前页面信息。   response.setDateHeader(&quot;Expires&quot;, 0);   response.addHeader( &quot;Cache-Control&quot;, &quot;no-cache&quot; );//浏览器和缓存服务器都不应该缓存页面信息response.addHeader( &quot;Cache-Control&quot;, &quot;no-store&quot; );//请求和响应的信息都不应该被存储在对方的磁盘系统中；    response.addHeader( &quot;Cache-Control&quot;, &quot;must-revalidate&quot; );//于客户机的每次请求，代理服务器必须想服务器验证缓存是否过时</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;这篇文章介绍了几种浏览器后退按钮强制刷新页面的方法,需要的朋友可以参考下&lt;br&gt;
+    
+    </summary>
+    
+      <category term="HTML" scheme="https://tianqingdian.github.io/categories/HTML/"/>
+    
+    
+      <category term="JS" scheme="https://tianqingdian.github.io/tags/JS/"/>
+    
+      <category term="刷新" scheme="https://tianqingdian.github.io/tags/%E5%88%B7%E6%96%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>&lt;input type=image&gt;标签事件自动提交表单</title>
     <link href="https://tianqingdian.github.io//blogs/year/12/13/input-type-image-%E6%A0%87%E7%AD%BE%E4%BA%8B%E4%BB%B6%E8%87%AA%E5%8A%A8%E6%8F%90%E4%BA%A4%E8%A1%A8%E5%8D%95/"/>
     <id>https://tianqingdian.github.io//blogs/year/12/13/input-type-image-标签事件自动提交表单/</id>
     <published>2017-12-13T07:27:43.000Z</published>
-    <updated>2017-12-13T07:47:53.754Z</updated>
+    <updated>2017-12-14T05:53:51.535Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="情景"><a href="#情景" class="headerlink" title="情景"></a>情景</h2><p>在下面的情况下点击<code>&lt;input type=image&gt;</code>来更换验证码会直接提交表单</p><pre><code>&lt;form class=&quot;form-login&quot; action=&quot;login.html&quot; method=&quot;get&quot;&gt;    &lt;div class=&quot;login-wrap&quot;&gt;        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;请输入用户名&quot; autofocus name=&quot;name&quot; id=&quot;count&quot;&gt; &lt;br&gt;         &lt;input type=&quot;password&quot;class=&quot;form-control&quot; placeholder=&quot;请输入密码&quot; name=&quot;password&quot;id=&quot;password&quot;&gt;         验证码:&lt;input type=&quot;text&quot; name=&quot;pcode&quot; class=&quot;form-control&quot; size=&quot;5&quot;&gt;          &lt;!-- 单击图片都可以换下一张 --&gt;          &lt;input id=&quot;pcode&quot; type=&quot;image&quot; src=&quot;pcode.html&quot; onclick=&quot;code();&quot;&gt;&lt;br&gt;        &lt;button class=&quot;btn btn-theme btn-block&quot; type=&quot;button&quot; id=&quot;login&quot;&gt;&lt;i class=&quot;fa fa-lock&quot;&gt;&lt;/i&gt; 登陆&lt;/button&gt;    &lt;/div&gt;&lt;/form&gt;</code></pre><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>可以在<code>&lt;input type=image&gt;</code>标签中添加onclick在事件结束后添加return false；语句如下:<br><code>&lt;input id=&quot;pcode&quot; type=&quot;image&quot; src=&quot;pcode.html&quot; onclick=&quot;code();return false；&quot;&gt;</code></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="情景"><a href="#情景" class="headerlink" title="情景"></a>情景</h2><p>在下面的情况下点击<code>&lt;input type=image&gt;</code>来会直接提交表单<br><a id="more"></a><br>    <form class="form-login" action="login.html" method="get"><br>        <div class="login-wrap"><br>            <input type="text" class="form-control" placeholder="请输入用户名" autofocus name="name" id="count"> <br><br>            <input type="password" class="form-control" placeholder="请输入密码" name="password" id="password"><br>            验证码:<input type="text" name="pcode" class="form-control" size="5"><br>            <!-- 单击图片可以换下一张 --><br>            <input id="pcode" type="image" src="pcode.html" onclick="code();"><br><br>            <button class="btn btn-theme btn-block" type="button" id="login"><i class="fa fa-lock"></i> 登陆</button><br>        </div><br>    </form></p><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><ol><li><p>可以在<code>&lt;input type=image&gt;</code>标签中添加onclick在事件结束后添加return false；语句如下:<br><code>&lt;input id=&quot;pcode&quot; type=&quot;image&quot; src=&quot;pcode.html&quot; onclick=&quot;code();return false；&quot;&gt;</code></p></li><li><p>如果不是必须要用<code>&lt;input&gt;</code>可以使用<code>&lt;img&gt;</code>标签来替代</p></li></ol>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h2 id=&quot;情景&quot;&gt;&lt;a href=&quot;#情景&quot; class=&quot;headerlink&quot; title=&quot;情景&quot;&gt;&lt;/a&gt;情景&lt;/h2&gt;&lt;p&gt;在下面的情况下点击&lt;code&gt;&amp;lt;input type=image&amp;gt;&lt;/code&gt;来更换验证码会直接提交表单&lt;/p&gt;
-&lt;pre&gt;&lt;
-      
+      &lt;h2 id=&quot;情景&quot;&gt;&lt;a href=&quot;#情景&quot; class=&quot;headerlink&quot; title=&quot;情景&quot;&gt;&lt;/a&gt;情景&lt;/h2&gt;&lt;p&gt;在下面的情况下点击&lt;code&gt;&amp;lt;input type=image&amp;gt;&lt;/code&gt;来会直接提交表单&lt;br&gt;
     
     </summary>
     

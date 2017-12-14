@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="情景在下面的情况下点击&amp;lt;input type=image&amp;gt;来更换验证码会直接提交表单 &amp;lt;form class=&amp;quot;form-login&amp;quot; action=&amp;quot;login.html&amp;quot; method=&amp;quot;get&amp;quot;&amp;gt;     &amp;lt;div class=&amp;quot;login-wrap&amp;quot;&amp;gt;         &amp;lt">
+<meta name="description" content="情景在下面的情况下点击&amp;lt;input type=image&amp;gt;来会直接提交表单">
 <meta name="keywords" content="input,image,表单">
 <meta property="og:type" content="article">
 <meta property="og:title" content="&lt;input type=image&gt;标签事件自动提交表单">
 <meta property="og:url" content="https://tianqingdian.github.io/blogs/year/12/13/input-type-image-标签事件自动提交表单/index.html">
 <meta property="og:site_name" content="天青丶">
-<meta property="og:description" content="情景在下面的情况下点击&amp;lt;input type=image&amp;gt;来更换验证码会直接提交表单 &amp;lt;form class=&amp;quot;form-login&amp;quot; action=&amp;quot;login.html&amp;quot; method=&amp;quot;get&amp;quot;&amp;gt;     &amp;lt;div class=&amp;quot;login-wrap&amp;quot;&amp;gt;         &amp;lt">
+<meta property="og:description" content="情景在下面的情况下点击&amp;lt;input type=image&amp;gt;来会直接提交表单">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-13T07:47:53.754Z">
+<meta property="og:updated_time" content="2017-12-14T05:53:51.535Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="&lt;input type=image&gt;标签事件自动提交表单">
-<meta name="twitter:description" content="情景在下面的情况下点击&amp;lt;input type=image&amp;gt;来更换验证码会直接提交表单 &amp;lt;form class=&amp;quot;form-login&amp;quot; action=&amp;quot;login.html&amp;quot; method=&amp;quot;get&amp;quot;&amp;gt;     &amp;lt;div class=&amp;quot;login-wrap&amp;quot;&amp;gt;         &amp;lt">
+<meta name="twitter:description" content="情景在下面的情况下点击&amp;lt;input type=image&amp;gt;来会直接提交表单">
 
 
 
@@ -398,18 +398,13 @@
       
 
       
-        <h2 id="情景"><a href="#情景" class="headerlink" title="情景"></a>情景</h2><p>在下面的情况下点击<code>&lt;input type=image&gt;</code>来更换验证码会直接提交表单</p>
-<pre><code>&lt;form class=&quot;form-login&quot; action=&quot;login.html&quot; method=&quot;get&quot;&gt;
-    &lt;div class=&quot;login-wrap&quot;&gt;
-        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;请输入用户名&quot; autofocus name=&quot;name&quot; id=&quot;count&quot;&gt; &lt;br&gt; 
-        &lt;input type=&quot;password&quot;class=&quot;form-control&quot; placeholder=&quot;请输入密码&quot; name=&quot;password&quot;id=&quot;password&quot;&gt; 
-        验证码:&lt;input type=&quot;text&quot; name=&quot;pcode&quot; class=&quot;form-control&quot; size=&quot;5&quot;&gt;  
-        &lt;!-- 单击图片都可以换下一张 --&gt;  
-        &lt;input id=&quot;pcode&quot; type=&quot;image&quot; src=&quot;pcode.html&quot; onclick=&quot;code();&quot;&gt;&lt;br&gt;
-        &lt;button class=&quot;btn btn-theme btn-block&quot; type=&quot;button&quot; id=&quot;login&quot;&gt;&lt;i class=&quot;fa fa-lock&quot;&gt;&lt;/i&gt; 登陆&lt;/button&gt;
-    &lt;/div&gt;
-&lt;/form&gt;
-</code></pre><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>可以在<code>&lt;input type=image&gt;</code>标签中添加onclick在事件结束后添加return false；语句如下:<br><code>&lt;input id=&quot;pcode&quot; type=&quot;image&quot; src=&quot;pcode.html&quot; onclick=&quot;code();return false；&quot;&gt;</code></p>
+        <h2 id="情景"><a href="#情景" class="headerlink" title="情景"></a>情景</h2><p>在下面的情况下点击<code>&lt;input type=image&gt;</code>来会直接提交表单<br><a id="more"></a><br>    <form class="form-login" action="login.html" method="get"><br>        <div class="login-wrap"><br>            <input type="text" class="form-control" placeholder="请输入用户名" autofocus name="name" id="count"> <br><br>            <input type="password" class="form-control" placeholder="请输入密码" name="password" id="password"><br>            验证码:<input type="text" name="pcode" class="form-control" size="5"><br>            <!-- 单击图片可以换下一张 --><br>            <input id="pcode" type="image" src="pcode.html" onclick="code();"><br><br>            <button class="btn btn-theme btn-block" type="button" id="login"><i class="fa fa-lock"></i> 登陆</button><br>        </div><br>    </form></p>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><ol>
+<li><p>可以在<code>&lt;input type=image&gt;</code>标签中添加onclick在事件结束后添加return false；语句如下:<br><code>&lt;input id=&quot;pcode&quot; type=&quot;image&quot; src=&quot;pcode.html&quot; onclick=&quot;code();return false；&quot;&gt;</code></p>
+</li>
+<li><p>如果不是必须要用<code>&lt;input&gt;</code>可以使用<code>&lt;img&gt;</code>标签来替代</p>
+</li>
+</ol>
 
       
     </div>
@@ -453,6 +448,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blogs/year/12/14/浏览器后退刷新页面/" rel="prev" title="浏览器后退刷新页面">
+                浏览器后退刷新页面 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -533,7 +532,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -555,7 +554,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

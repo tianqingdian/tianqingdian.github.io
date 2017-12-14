@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[浏览器后退刷新页面]]></title>
+    <url>%2F%2Fblogs%2Fyear%2F12%2F14%2F%E6%B5%8F%E8%A7%88%E5%99%A8%E5%90%8E%E9%80%80%E5%88%B7%E6%96%B0%E9%A1%B5%E9%9D%A2%2F</url>
+    <content type="text"><![CDATA[这篇文章介绍了几种浏览器后退按钮强制刷新页面的方法,需要的朋友可以参考下 方法一:1、 在页面中增加隐藏域 &lt;input type=&quot;hidden&quot; id=&quot;refreshed&quot; value=&quot;no&quot;&gt;2、 通过js设置和获取隐藏域值来自动刷新页面 onload=function(){ var e=document.getElementById(&quot;refreshed&quot;); if(e.value==&quot;no&quot;)e.value=&quot;yes&quot;; else{e.value=&quot;no&quot;;location.reload();} } 方法二:不使用隐藏域的js写法： if(window.name != &quot;bencalie&quot;){ location.reload(); window.name = &quot;bencalie&quot;; }else{ window.name = &quot;&quot;; } 方法三:禁止HTML头部缓存： &lt;meta http-equiv=&quot;Pragma&quot; content=&quot;no-cache&quot;&gt; &lt;meta http-equiv=&quot;Cache-Control&quot; content=&quot;no-cache&quot;&gt; &lt;meta http-equiv=&quot;Expires&quot; content=&quot;0&quot;&gt; 方法四:jsp设置回退页的头部缓存： &lt;% response.setHeader(&quot;Cache-Control&quot;,&quot;no-store&quot;); response.setDateHeader(&quot;Expires&quot;, 0); response.setHeader(&quot;Pragma&quot;,&quot;no-cache&quot;); %&gt; 方法五:服务器设置头部缓存： response.setHeader( &quot;Pragma&quot;, &quot;no-cache&quot; );//不允许浏览器端或缓存服务器缓存当前页面信息。 response.setDateHeader(&quot;Expires&quot;, 0); response.addHeader( &quot;Cache-Control&quot;, &quot;no-cache&quot; );//浏览器和缓存服务器都不应该缓存页面信息 response.addHeader( &quot;Cache-Control&quot;, &quot;no-store&quot; );//请求和响应的信息都不应该被存储在对方的磁盘系统中； response.addHeader( &quot;Cache-Control&quot;, &quot;must-revalidate&quot; );//于客户机的每次请求，代理服务器必须想服务器验证缓存是否过时]]></content>
+      <categories>
+        <category>HTML</category>
+      </categories>
+      <tags>
+        <tag>JS</tag>
+        <tag>刷新</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[标签事件自动提交表单]]></title>
     <url>%2F%2Fblogs%2Fyear%2F12%2F13%2Finput-type-image-%E6%A0%87%E7%AD%BE%E4%BA%8B%E4%BB%B6%E8%87%AA%E5%8A%A8%E6%8F%90%E4%BA%A4%E8%A1%A8%E5%8D%95%2F</url>
-    <content type="text"><![CDATA[情景在下面的情况下点击&lt;input type=image&gt;来更换验证码会直接提交表单 &lt;form class=&quot;form-login&quot; action=&quot;login.html&quot; method=&quot;get&quot;&gt; &lt;div class=&quot;login-wrap&quot;&gt; &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;请输入用户名&quot; autofocus name=&quot;name&quot; id=&quot;count&quot;&gt; &lt;br&gt; &lt;input type=&quot;password&quot;class=&quot;form-control&quot; placeholder=&quot;请输入密码&quot; name=&quot;password&quot;id=&quot;password&quot;&gt; 验证码:&lt;input type=&quot;text&quot; name=&quot;pcode&quot; class=&quot;form-control&quot; size=&quot;5&quot;&gt; &lt;!-- 单击图片都可以换下一张 --&gt; &lt;input id=&quot;pcode&quot; type=&quot;image&quot; src=&quot;pcode.html&quot; onclick=&quot;code();&quot;&gt;&lt;br&gt; &lt;button class=&quot;btn btn-theme btn-block&quot; type=&quot;button&quot; id=&quot;login&quot;&gt;&lt;i class=&quot;fa fa-lock&quot;&gt;&lt;/i&gt; 登陆&lt;/button&gt; &lt;/div&gt; &lt;/form&gt; 解决可以在&lt;input type=image&gt;标签中添加onclick在事件结束后添加return false；语句如下:&lt;input id=&quot;pcode&quot; type=&quot;image&quot; src=&quot;pcode.html&quot; onclick=&quot;code();return false；&quot;&gt;]]></content>
+    <content type="text"><![CDATA[情景在下面的情况下点击&lt;input type=image&gt;来会直接提交表单 验证码: 登陆 解决 可以在&lt;input type=image&gt;标签中添加onclick在事件结束后添加return false；语句如下:&lt;input id=&quot;pcode&quot; type=&quot;image&quot; src=&quot;pcode.html&quot; onclick=&quot;code();return false；&quot;&gt; 如果不是必须要用&lt;input&gt;可以使用&lt;img&gt;标签来替代]]></content>
       <categories>
         <category>HTML</category>
       </categories>
