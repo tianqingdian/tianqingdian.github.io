@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="天青丶">
 <meta property="og:description" content="这篇文章详细地介绍了前端的Jquery插件如何实现分页，需要的朋友可以参考下！">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-22T02:59:51.757Z">
+<meta property="og:updated_time" content="2017-12-22T03:04:16.034Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jquery插件实现分页">
 <meta name="twitter:description" content="这篇文章详细地介绍了前端的Jquery插件如何实现分页，需要的朋友可以参考下！">
@@ -577,7 +577,9 @@
 
 &lt;/head&gt;
 &lt;body&gt;
+&lt;!-- 数据渲染 --&gt;
 &lt;div&gt;
+    &lt;!-- thead --&gt;
     &lt;div class=&quot;grid-header&quot; id=&quot;grid1&quot;&gt;
         &lt;span class=&quot;row-1&quot;&gt;姓名&lt;/span&gt;
         &lt;span class=&quot;row-1&quot;&gt;年龄&lt;/span&gt;
@@ -585,14 +587,10 @@
         &lt;span class=&quot;row-1&quot;&gt;手机号码&lt;/span&gt;
         &lt;span class=&quot;row-1&quot;&gt;居住地址&lt;/span&gt;
     &lt;/div&gt;
+    &lt;!-- tbody --&gt;
     &lt;div class=&quot;grid-body&quot;&gt;&lt;/div&gt;
-
-
-    &lt;/div&gt;
     &lt;!--分页插件--&gt;
     &lt;div class=&quot;page&quot; id=&quot;page&quot;&gt;&lt;/div&gt;
-
-
 &lt;/div&gt;
 
 &lt;script type=&quot;text/javascript&quot;&gt;
