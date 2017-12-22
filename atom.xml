@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tianqingdian.github.io/"/>
-  <updated>2017-12-22T04:05:01.586Z</updated>
+  <updated>2017-12-22T04:08:38.674Z</updated>
   <id>https://tianqingdian.github.io/</id>
   
   <author>
@@ -21,19 +21,20 @@
     <link href="https://tianqingdian.github.io//blogs/year/12/22/Jackson-ObjectMapper%E7%B1%BB%E4%BD%BF%E7%94%A8%E8%A7%A3%E6%9E%90/"/>
     <id>https://tianqingdian.github.io//blogs/year/12/22/Jackson-ObjectMapper类使用解析/</id>
     <published>2017-12-22T03:45:29.000Z</published>
-    <updated>2017-12-22T04:05:01.586Z</updated>
+    <updated>2017-12-22T04:08:38.674Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><blockquote><p>利用ObjectMapper实现Json和bean的自由转换<br><a id="more"></a></p><h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>代码:</p></blockquote><pre><code>import java.io.IOException;import com.fasterxml.jackson.core.JsonParseException;import com.fasterxml.jackson.databind.JsonMappingException;import com.fasterxml.jackson.databind.ObjectMapper;public class JsonTest {    public static void main(String args[]) {        ObjectMapper mapper = new ObjectMapper();        String jsonString = &quot;{\&quot;name\&quot;:\&quot;Mahesh\&quot;, \&quot;age\&quot;:21}&quot;;        // map json to student        try {            Student student = mapper.readValue(jsonString, Student.class);            System.out.println(student);            // 把对象转成json string类型的            jsonString = mapper.writeValueAsString(student);            System.out.println(jsonString);        } catch (JsonParseException e) {            e.printStackTrace();        } catch (JsonMappingException e) {            e.printStackTrace();        } catch (IOException e) {            e.printStackTrace();        }    }}//实体类class Student {    private String name;    private int age;    public Student() {    }    public String getName() {        return name;    }    public void setName(String name) {        this.name = name;    }    public int getAge() {        return age;    }    public void setAge(int age) {        this.age = age;    }    public String toString() {        return &quot;Student [ name: &quot; + name + &quot;, age: &quot; + age + &quot; ]&quot;;    }}</code></pre><p>输出:</p><pre><code>Student [ name: Mahesh, age: 21 ]{&quot;name&quot;:&quot;Mahesh&quot;,&quot;age&quot;:21}</code></pre>]]></content>
+    <content type="html"><![CDATA[<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>利用ObjectMapper实现Json和bean的自由转换<br><a id="more"></a></p><h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>代码:</p><pre><code>import java.io.IOException;import com.fasterxml.jackson.core.JsonParseException;import com.fasterxml.jackson.databind.JsonMappingException;import com.fasterxml.jackson.databind.ObjectMapper;public class JsonTest {    public static void main(String args[]) {        ObjectMapper mapper = new ObjectMapper();        String jsonString = &quot;{\&quot;name\&quot;:\&quot;Mahesh\&quot;, \&quot;age\&quot;:21}&quot;;        // map json to student        try {            Student student = mapper.readValue(jsonString, Student.class);            System.out.println(student);            // 把对象转成json string类型的            jsonString = mapper.writeValueAsString(student);            System.out.println(jsonString);        } catch (JsonParseException e) {            e.printStackTrace();        } catch (JsonMappingException e) {            e.printStackTrace();        } catch (IOException e) {            e.printStackTrace();        }    }}//实体类class Student {    private String name;    private int age;    public Student() {    }    public String getName() {        return name;    }    public void setName(String name) {        this.name = name;    }    public int getAge() {        return age;    }    public void setAge(int age) {        this.age = age;    }    public String toString() {        return &quot;Student [ name: &quot; + name + &quot;, age: &quot; + age + &quot; ]&quot;;    }}</code></pre><p>输出:</p><pre><code>Student [ name: Mahesh, age: 21 ]{&quot;name&quot;:&quot;Mahesh&quot;,&quot;age&quot;:21}</code></pre>]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;headerlink&quot; title=&quot;需求&quot;&gt;&lt;/a&gt;需求&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;利用ObjectMapper实现Json和bean的自由转换&lt;br&gt;
+      &lt;h2 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;headerlink&quot; title=&quot;需求&quot;&gt;&lt;/a&gt;需求&lt;/h2&gt;&lt;p&gt;利用ObjectMapper实现Json和bean的自由转换&lt;br&gt;
     
     </summary>
     
       <category term="Java" scheme="https://tianqingdian.github.io/categories/Java/"/>
     
+    
+      <category term="java" scheme="https://tianqingdian.github.io/tags/java/"/>
     
       <category term="json" scheme="https://tianqingdian.github.io/tags/json/"/>
     
