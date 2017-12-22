@@ -66,14 +66,35 @@
 
     <url>
         <loc>https://tianqingdian.github.io/tags/JS/</loc>
-        <lastmod>2017-12-14T07:15:29.028Z</lastmod>
+        <lastmod>2017-12-22T02:10:38.744Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://tianqingdian.github.io/tags/%E5%88%B7%E6%96%B0/</loc>
-        <lastmod>2017-12-14T07:15:29.028Z</lastmod>
+        <lastmod>2017-12-22T02:10:38.744Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://tianqingdian.github.io/tags/jquery/</loc>
+        <lastmod>2017-12-22T02:56:00.233Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://tianqingdian.github.io/tags/%E5%89%8D%E7%AB%AF/</loc>
+        <lastmod>2017-12-22T02:56:00.233Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://tianqingdian.github.io/tags/%E5%88%86%E9%A1%B5/</loc>
+        <lastmod>2017-12-22T02:56:00.233Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
